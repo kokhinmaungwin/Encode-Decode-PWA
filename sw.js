@@ -1,16 +1,17 @@
 const VERSION = 'v1::20251109';
-const CACHE_NAME = VERSION;
-const OFFLINE_URL = './';
+const BASE_URL = Encode-Decode-PWA;
+const OFFLINE_URL = BASE_URL;
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll([
-        './',
-        './index.html',
-        './manifest.json',
-        './icons/icon-192.png',
-        './icons/icon-512.png',
+        BASE_URL,
+        BASE_URL + 'index.html',
+        BASE_URL + 'manifest.json',
+        BASE_URL + 'sw.js',
+        BASE_URL + 'icons/icon-192.png',
+        BASE_URL + 'icons/icon-512.png',
       ]);
     }).then(() => self.skipWaiting())
   );
