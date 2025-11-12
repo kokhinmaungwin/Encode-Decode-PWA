@@ -40,6 +40,22 @@ Supports Base64, URL encoding/decoding, MD5 and SHA-256 hashing, and case conver
 - Clone the repo and serve files via any static server (e.g., GitHub Pages, live-server).  
 - Modify code in `index.html`, `manifest.json`, and `sw.js` as needed.
 
+## Important Notice About Browser Cache and Offline Usage
+
+This Progressive Web App (PWA) relies heavily on both **Service Worker cache** and **Browser cache** to deliver a seamless offline experience.
+
+**Please be aware:**
+
+- Clearing your **browser cache** will remove essential files (JavaScript, CSS, HTML) cached by the browser.
+- While the Service Worker manages its own cache (Cache Storage), clearing the browser cache can cause some assets to become temporarily unavailable.
+- This may result in errors or prevent the app from working properly when offline.
+- For the best offline experience, **avoid clearing the browser cache** while using this app.
+- When updates are made, the app uses cache versioning and prompts users to refresh, ensuring you always have the latest version.
+
+If you experience issues after clearing your browser cache, try refreshing the page or reopening the app with an active internet connection.
+
+Thank you for understanding!
+
 ## License
 
 Open source and free to use.
